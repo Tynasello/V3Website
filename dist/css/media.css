@@ -1,0 +1,1327 @@
+.container {
+  width: 65vw;
+  margin: 0 auto;
+  padding: 0; }
+
+.dark {
+  background: whitesmoke; }
+
+.light {
+  background: white; }
+
+.sc {
+  background: #52BE80; }
+
+h1 {
+  font-family: "Raleway", sans-serif;
+  color: #1F1E62;
+  font-size: 64px;
+  line-height: 1.7;
+  letter-spacing: -.5px;
+  font-weight: 700; }
+
+h2 {
+  font-family: "Rubik", "Arial", sans-serif;
+  color: #1F1E62;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  letter-spacing: -.5px;
+  font-weight: 700; }
+
+h3 {
+  font-family: "Rubik", "Arial", sans-serif;
+  color: #52BE80;
+  font-size: 1.6rem; }
+
+p {
+  font-family: "Rubik", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 1.35;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #232340; }
+
+.center-end-hover {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 2px; }
+  .center-end-hover:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    background-color: whitesmoke;
+    transition: transform 0.4s; }
+  .center-end-hover:hover:after {
+    transform: scaleX(1); }
+
+.left-to-right {
+  font-size: 1.1rem;
+  text-align: center;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding-bottom: 5px; }
+  .left-to-right:hover {
+    transform: scale(1);
+    transition: transform .5s ease; }
+  .left-to-right:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.4s; }
+  .left-to-right:hover:after {
+    transform: scale(1); }
+
+#PROJECTS .container .project-container {
+  padding: 10rem 0; }
+  #PROJECTS .container .project-container h1 {
+    text-align: center; }
+  #PROJECTS .container .project-container .images {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; }
+    #PROJECTS .container .project-container .images .index-project {
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column; }
+      #PROJECTS .container .project-container .images .index-project img {
+        margin: 1rem;
+        width: 270px;
+        height: 270px; }
+      #PROJECTS .container .project-container .images .index-project .project-link {
+        width: 80%;
+        text-align: center;
+        font-size: 1.2rem;
+        color: gray;
+        text-decoration: none;
+        margin: 0 auto; }
+        #PROJECTS .container .project-container .images .index-project .project-link h2 {
+          transition: all .5s; }
+          #PROJECTS .container .project-container .images .index-project .project-link h2:hover {
+            color: #52BE80; }
+      #PROJECTS .container .project-container .images .index-project .project-box .text-animate {
+        opacity: 0;
+        background-color: #52BE80;
+        position: absolute;
+        top: 0;
+        margin: 1rem;
+        width: 270px;
+        height: 270px;
+        color: #232340;
+        -webkit-transition: all 300ms ease-out;
+        -moz-transition: all 300ms ease-out;
+        -o-transition: all 300ms ease-out;
+        -ms-transition: all 300ms ease-out;
+        transition: all 300ms ease-out;
+        animation: animated-border 2s infinite; }
+      #PROJECTS .container .project-container .images .index-project .project-box:hover .text-animate {
+        opacity: 1; }
+      #PROJECTS .container .project-container .images .index-project .project-box .text {
+        -webkit-transition: all 300ms ease-out;
+        -moz-transition: all 300ms ease-out;
+        -o-transition: all 300ms ease-out;
+        -ms-transition: all 300ms ease-out;
+        transition: all 300ms ease-out;
+        transform: translateY(30px);
+        -webkit-transform: translateY(30px); }
+      #PROJECTS .container .project-container .images .index-project .project-box .title {
+        font-size: 1rem;
+        text-align: left;
+        transition-delay: 0.2s;
+        transition-duration: 0.3s;
+        margin: 2.3rem 1.5rem 0 1.5rem; }
+      #PROJECTS .container .project-container .images .index-project .project-box:hover .title,
+      #PROJECTS .container .project-container .images .index-project .project-box:focus .title {
+        opacity: 1;
+        transform: translateY(0px);
+        -webkit-transform: translateY(0px); }
+  #PROJECTS .container .project-container .project-bottom {
+    margin: 3rem 0; }
+    #PROJECTS .container .project-container .project-bottom p {
+      text-align: center;
+      width: 40%;
+      margin: 0 auto; }
+
+.btn {
+  text-align: center;
+  border-radius: 40px;
+  background: #52BE80;
+  border: 2px solid #52BE80;
+  color: white;
+  cursor: pointer;
+  transition: all .6s ease;
+  padding: .3rem .8rem;
+  text-transform: uppercase;
+  text-decoration: none; }
+  .btn:hover {
+    color: #52BE80;
+    background: transparent; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  overflow-x: hidden;
+  position: relative; }
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Rubik", "Arial", sans-serif;
+  line-height: 1.4;
+  color: #1F1E62; }
+
+#MAIN #HEADER {
+  background-color: #77aa77;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 2 1'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%2377aa77'/%3E%3Cstop offset='1' stop-color='%234fd'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23cf8' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23cf8' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='2' y2='2'%3E%3Cstop offset='0' stop-color='%23cf8' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23cf8' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='2' height='1'/%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='url(%23b)' points='0 1 0 0 2 0'/%3E%3Cpolygon fill='url(%23c)' points='2 1 2 0 0 0'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: cover; }
+  #MAIN #HEADER .container .header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5rem; }
+    #MAIN #HEADER .container .header-content .header-left {
+      margin-top: 8rem;
+      display: flex;
+      flex-direction: column; }
+      #MAIN #HEADER .container .header-content .header-left p {
+        margin: 1rem 0; }
+    #MAIN #HEADER .container .header-content img.profile-pic {
+      height: 400px;
+      position: relative;
+      bottom: 0;
+      margin-top: 6rem; }
+  #MAIN #HEADER .container .nav {
+    position: absolute;
+    background: transparent;
+    width: 100vw;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    max-width: 100vw;
+    overflow-x: hidden; }
+    #MAIN #HEADER .container .nav .links {
+      margin: 1rem 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      #MAIN #HEADER .container .nav .links a {
+        margin: 1rem;
+        text-decoration: none; }
+        #MAIN #HEADER .container .nav .links a h3 {
+          color: #1F1E62;
+          font-size: 1.2rem; }
+
+#MAIN #ABOUT .container {
+  margin: 5rem auto;
+  width: 50vw; }
+  #MAIN #ABOUT .container .about-content .contact-links .link {
+    margin: 1rem 0; }
+    #MAIN #ABOUT .container .about-content .contact-links .link a {
+      color: #232340;
+      text-decoration: none;
+      font-size: 1.1rem;
+      margin: 0 1rem; }
+      #MAIN #ABOUT .container .about-content .contact-links .link a i {
+        color: #52BE80;
+        font-size: 1.4rem; }
+        #MAIN #ABOUT .container .about-content .contact-links .link a i:hover {
+          transform: scale(1.3);
+          transition: all .5s ease-in-out; }
+  #MAIN #ABOUT .container .about-content .experience-with {
+    margin: 1rem 0; }
+  #MAIN #ABOUT .container .about-content .languages-list {
+    margin: 1rem 0;
+    width: 20vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr; }
+
+#MAIN .cube2 {
+  position: absolute;
+  height: 350px;
+  right: 10px;
+  overflow-x: hidden; }
+
+#MAIN #WORK-EXPERIENCE .container .work-container {
+  margin: 10rem 0; }
+  #MAIN #WORK-EXPERIENCE .container .work-container h1 {
+    text-align: center; }
+  #MAIN #WORK-EXPERIENCE .container .work-container .work {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem auto; }
+    #MAIN #WORK-EXPERIENCE .container .work-container .work .work-info {
+      text-align: center; }
+    #MAIN #WORK-EXPERIENCE .container .work-container .work .work-description {
+      background: whitesmoke;
+      padding: 3rem;
+      border-radius: 10px;
+      box-shadow: 5px 5px 20px lightgrey; }
+      #MAIN #WORK-EXPERIENCE .container .work-container .work .work-description img {
+        height: 10vh;
+        width: auto;
+        position: absolute;
+        right: 44vw;
+        transform: rotate(180deg); }
+
+#MAIN #ACHIEVEMENTS .cube {
+  position: absolute;
+  height: 350px;
+  margin-top: 15rem;
+  left: -175px; }
+
+#MAIN #ACHIEVEMENTS .container .achievements-container {
+  padding: 10rem 0; }
+  #MAIN #ACHIEVEMENTS .container .achievements-container h1 {
+    text-align: center; }
+  #MAIN #ACHIEVEMENTS .container .achievements-container .marks-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    #MAIN #ACHIEVEMENTS .container .achievements-container .marks-section .marks {
+      margin: 0 4rem; }
+      #MAIN #ACHIEVEMENTS .container .achievements-container .marks-section .marks h2.twenty {
+        font-size: 1.5rem; }
+        #MAIN #ACHIEVEMENTS .container .achievements-container .marks-section .marks h2.twenty span {
+          font-size: 5.5rem; }
+      #MAIN #ACHIEVEMENTS .container .achievements-container .marks-section .marks h3 {
+        margin-left: 3rem;
+        display: inline-block;
+        border-bottom: 1px solid #1F1E62; }
+      #MAIN #ACHIEVEMENTS .container .achievements-container .marks-section .marks h2 {
+        margin-left: 3rem;
+        margin-top: 1rem;
+        font-size: 1.3rem; }
+      #MAIN #ACHIEVEMENTS .container .achievements-container .marks-section .marks p {
+        margin-left: 3rem;
+        width: 13vw; }
+  #MAIN #ACHIEVEMENTS .container .achievements-container .udemy-section {
+    margin: 5rem 0; }
+    #MAIN #ACHIEVEMENTS .container .achievements-container .udemy-section p {
+      text-align: center; }
+
+#MAIN #FOOTER {
+  background-image: linear-gradient(to right, #17202A, #2C3E50);
+  /* Animation */ }
+  #MAIN #FOOTER .waves {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    transform: rotate(180deg); }
+  #MAIN #FOOTER .content {
+    position: relative;
+    height: 20vh;
+    text-align: center;
+    background-color: white; }
+  #MAIN #FOOTER .parallax > use {
+    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite; }
+  #MAIN #FOOTER .parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s; }
+  #MAIN #FOOTER .parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s; }
+  #MAIN #FOOTER .parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s; }
+  #MAIN #FOOTER .parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s; }
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0); }
+  100% {
+    transform: translate3d(85px, 0, 0); } }
+  @media (max-width: 768px) {
+    #MAIN #FOOTER .waves {
+      height: 40px;
+      min-height: 40px; }
+    #MAIN #FOOTER .content {
+      height: 30vh; } }
+  #MAIN #FOOTER .footer-content {
+    position: relative;
+    margin: 10rem auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 80vw; }
+    #MAIN #FOOTER .footer-content .contact-logo-section {
+      margin-right: 5rem; }
+      #MAIN #FOOTER .footer-content .contact-logo-section h3 {
+        font-size: 4rem;
+        margin: 1rem 0;
+        color: white; }
+      #MAIN #FOOTER .footer-content .contact-logo-section p {
+        font-size: 1.2rem;
+        max-width: 30vw;
+        margin: 1rem 0;
+        color: white; }
+    #MAIN #FOOTER .footer-content .links-section {
+      margin-left: 5rem; }
+      #MAIN #FOOTER .footer-content .links-section ul {
+        margin: 1rem; }
+        #MAIN #FOOTER .footer-content .links-section ul li {
+          list-style: none;
+          margin: 1.6rem 0; }
+          #MAIN #FOOTER .footer-content .links-section ul li a {
+            font-size: 1.3rem;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            flex-direction: row; }
+            #MAIN #FOOTER .footer-content .links-section ul li a i {
+              font-size: 1.7rem;
+              margin: 0 2rem;
+              color: white; }
+              #MAIN #FOOTER .footer-content .links-section ul li a i:hover {
+                color: #52BE80;
+                transform: scale(1.3);
+                transition: all .5s ease-in-out; }
+            #MAIN #FOOTER .footer-content .links-section ul li a p {
+              color: white; }
+              #MAIN #FOOTER .footer-content .links-section ul li a p:hover {
+                color: #52BE80;
+                transform: scale(1.2);
+                transition: all .5s ease-in-out; }
+  #MAIN #FOOTER p.copy-right {
+    font-size: 1rem;
+    color: grey;
+    text-align: center;
+    padding-bottom: 2rem; }
+
+.cert {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .cert img {
+    margin: 1rem;
+    width: 900px; }
+
+@keyframes animated-border {
+  0% {
+    box-shadow: -3px -3px 8px .5px lightgrey, 3px 3px 8px .5px lightblue; }
+  100% {
+    box-shadow: 3px 3px 8px .5px lightblue, -3px -3px 8px .5px lightgrey; } }
+
+@media screen and (max-width: 1200px) {
+  #MAIN #HEADER .container .header-content {
+    margin: 0 2rem; }
+    #MAIN #HEADER .container .header-content .header-left {
+      margin-top: 6rem;
+      display: flex;
+      flex-direction: column; }
+    #MAIN #HEADER .container .header-content img.profile-pic {
+      margin-top: 3rem;
+      height: 400px;
+      top: .05vh; }
+  #MAIN #HEADER .container .nav .links {
+    margin: .8rem .7rem; }
+  #PROJECTS .container {
+    width: 80vw; }
+    #PROJECTS .container .project-container {
+      padding: 10rem 0;
+      width: 80vw; }
+      #PROJECTS .container .project-container h1 {
+        text-align: center; }
+      #PROJECTS .container .project-container .images {
+        margin: 2rem auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-content: center;
+        grid-gap: .5rem; }
+        #PROJECTS .container .project-container .images .index-project {
+          cursor: pointer;
+          position: relative;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column; }
+          #PROJECTS .container .project-container .images .index-project img {
+            margin: 1rem;
+            width: 200px;
+            height: 200px; }
+          #PROJECTS .container .project-container .images .index-project .project-link {
+            width: 80%;
+            text-align: center;
+            font-size: 1.2rem;
+            color: gray;
+            text-decoration: none;
+            margin: 0 auto; }
+            #PROJECTS .container .project-container .images .index-project .project-link h2 {
+              transition: all .5s; }
+              #PROJECTS .container .project-container .images .index-project .project-link h2:hover {
+                color: #52BE80; }
+          #PROJECTS .container .project-container .images .index-project .project-box .text-animate {
+            opacity: 0;
+            background-color: #52BE80;
+            position: absolute;
+            top: 0;
+            margin: 1rem;
+            width: 200px;
+            height: 200px;
+            color: #232340;
+            -webkit-transition: all 300ms ease-out;
+            -moz-transition: all 300ms ease-out;
+            -o-transition: all 300ms ease-out;
+            -ms-transition: all 300ms ease-out;
+            transition: all 300ms ease-out;
+            animation: animated-border 2s infinite; }
+          #PROJECTS .container .project-container .images .index-project .project-box:hover .text-animate {
+            opacity: 1; }
+          #PROJECTS .container .project-container .images .index-project .project-box .text {
+            -webkit-transition: all 300ms ease-out;
+            -moz-transition: all 300ms ease-out;
+            -o-transition: all 300ms ease-out;
+            -ms-transition: all 300ms ease-out;
+            transition: all 300ms ease-out;
+            transform: translateY(30px);
+            -webkit-transform: translateY(30px); }
+          #PROJECTS .container .project-container .images .index-project .project-box .title {
+            font-size: .75rem;
+            text-align: left;
+            transition-delay: 0.2s;
+            transition-duration: 0.3s;
+            margin: 1rem 1.5rem 0 1.5rem; }
+          #PROJECTS .container .project-container .images .index-project .project-box:hover .title,
+          #PROJECTS .container .project-container .images .index-project .project-box:focus .title {
+            opacity: 1;
+            transform: translateY(0px);
+            -webkit-transform: translateY(0px); }
+      #PROJECTS .container .project-container .project-bottom {
+        margin: 3rem 0; }
+        #PROJECTS .container .project-container .project-bottom p {
+          text-align: center;
+          width: 40%;
+          margin: 0 auto; } }
+
+@media screen and (max-width: 1500px) {
+  #MAIN #HEADER .container .header-content {
+    margin: 0 2rem; }
+    #MAIN #HEADER .container .header-content .header-left {
+      margin-top: 6rem;
+      display: flex;
+      flex-direction: column; }
+    #MAIN #HEADER .container .header-content img.profile-pic {
+      margin-top: 3rem;
+      height: 370px;
+      top: .05vh; }
+  #MAIN #HEADER .container .nav .links {
+    margin: .8rem .7rem; }
+  #PROJECTS .container {
+    width: 80vw; }
+    #PROJECTS .container .project-container {
+      padding: 10rem 0;
+      width: 80vw; }
+      #PROJECTS .container .project-container h1 {
+        text-align: center; }
+      #PROJECTS .container .project-container .images {
+        margin: 2rem auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-content: center;
+        grid-gap: .5rem; }
+        #PROJECTS .container .project-container .images .index-project {
+          cursor: pointer;
+          position: relative;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column; }
+          #PROJECTS .container .project-container .images .index-project img {
+            margin: 1rem;
+            width: 200px;
+            height: 200px; }
+          #PROJECTS .container .project-container .images .index-project .project-link {
+            width: 80%;
+            text-align: center;
+            font-size: 1.2rem;
+            color: gray;
+            text-decoration: none;
+            margin: 0 auto; }
+            #PROJECTS .container .project-container .images .index-project .project-link h2 {
+              transition: all .5s; }
+              #PROJECTS .container .project-container .images .index-project .project-link h2:hover {
+                color: #52BE80; }
+          #PROJECTS .container .project-container .images .index-project .project-box .text-animate {
+            opacity: 0;
+            background-color: #52BE80;
+            position: absolute;
+            top: 0;
+            margin: 1rem;
+            width: 200px;
+            height: 200px;
+            color: #232340;
+            -webkit-transition: all 300ms ease-out;
+            -moz-transition: all 300ms ease-out;
+            -o-transition: all 300ms ease-out;
+            -ms-transition: all 300ms ease-out;
+            transition: all 300ms ease-out;
+            animation: animated-border 2s infinite; }
+          #PROJECTS .container .project-container .images .index-project .project-box:hover .text-animate {
+            opacity: 1; }
+          #PROJECTS .container .project-container .images .index-project .project-box .text {
+            -webkit-transition: all 300ms ease-out;
+            -moz-transition: all 300ms ease-out;
+            -o-transition: all 300ms ease-out;
+            -ms-transition: all 300ms ease-out;
+            transition: all 300ms ease-out;
+            transform: translateY(30px);
+            -webkit-transform: translateY(30px); }
+          #PROJECTS .container .project-container .images .index-project .project-box .title {
+            font-size: .75rem;
+            text-align: left;
+            transition-delay: 0.2s;
+            transition-duration: 0.3s;
+            margin: 1rem 1.5rem 0 1.5rem; }
+          #PROJECTS .container .project-container .images .index-project .project-box:hover .title,
+          #PROJECTS .container .project-container .images .index-project .project-box:focus .title {
+            opacity: 1;
+            transform: translateY(0px);
+            -webkit-transform: translateY(0px); }
+      #PROJECTS .container .project-container .project-bottom {
+        margin: 3rem 0; }
+        #PROJECTS .container .project-container .project-bottom p {
+          text-align: center;
+          width: 40%;
+          margin: 0 auto; } }
+
+@media screen and (max-width: 1024px) {
+  #MAIN #HEADER .container .header-content {
+    margin: 0 0; }
+    #MAIN #HEADER .container .header-content .header-left {
+      margin-top: 6rem;
+      display: flex;
+      flex-direction: column; }
+    #MAIN #HEADER .container .header-content img.profile-pic {
+      height: 350px;
+      top: .1vh; }
+  #MAIN #HEADER .container .nav .links {
+    margin: .5rem .4rem; }
+  #MAIN #WORK-EXPERIENCE .container {
+    width: 80vw; }
+    #MAIN #WORK-EXPERIENCE .container .work-container {
+      margin: 10rem 0; }
+      #MAIN #WORK-EXPERIENCE .container .work-container h1 {
+        text-align: center; }
+      #MAIN #WORK-EXPERIENCE .container .work-container .work {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 4rem auto; }
+        #MAIN #WORK-EXPERIENCE .container .work-container .work .work-description {
+          padding: 3rem; }
+  #MAIN #ACHIEVEMENTS .cube {
+    left: -140px; }
+  #MAIN #ACHIEVEMENTS .container .achievements-container .marks-section .marks {
+    margin: 0 2rem; }
+    #MAIN #ACHIEVEMENTS .container .achievements-container .marks-section .marks p {
+      margin-left: 3rem;
+      width: 20vw; }
+  #MAIN .cube2 {
+    height: 300px; }
+  #MAIN #ACHIEVEMENTS .cube {
+    height: 300px; }
+  #MAIN #PROJECTS .container {
+    width: 80vw; }
+    #MAIN #PROJECTS .container .project-container {
+      padding: 10rem 0;
+      width: 80vw; }
+      #MAIN #PROJECTS .container .project-container h1 {
+        text-align: center; }
+      #MAIN #PROJECTS .container .project-container .images {
+        margin: 2rem auto;
+        display: grid;
+        grid-template-columns: 25vw 25vw;
+        justify-content: center;
+        grid-gap: .5rem; }
+        #MAIN #PROJECTS .container .project-container .images .index-project img {
+          margin: 1rem;
+          width: 230px;
+          height: 230px; }
+        #MAIN #PROJECTS .container .project-container .images .index-project .project-link {
+          width: 80%;
+          text-align: center;
+          font-size: 1.2rem;
+          color: gray;
+          text-decoration: none;
+          margin: 0 auto; }
+        #MAIN #PROJECTS .container .project-container .images .index-project .project-box .text-animate {
+          opacity: 0;
+          background-color: #52BE80;
+          position: absolute;
+          top: 0;
+          margin: 1rem;
+          width: 230px;
+          height: 230px;
+          color: #232340; }
+        #MAIN #PROJECTS .container .project-container .images .index-project .project-box:hover .text-animate {
+          opacity: 1; }
+        #MAIN #PROJECTS .container .project-container .images .index-project .project-box .title {
+          font-size: .9rem;
+          text-align: left;
+          transition-delay: 0.2s;
+          transition-duration: 0.3s;
+          margin: 1rem 1.5rem 0 1.5rem; }
+      #MAIN #PROJECTS .container .project-container .project-bottom {
+        margin: 3rem 0; }
+        #MAIN #PROJECTS .container .project-container .project-bottom p {
+          text-align: center;
+          width: 40%;
+          margin: 0 auto; } }
+
+@media screen and (max-width: 900px) {
+  h1 {
+    font-size: 50px; }
+  h2 {
+    font-size: 1.3rem; }
+  h3 {
+    font-size: 1.3rem; }
+  p {
+    font-size: 17px; }
+  #MAIN #HEADER .container .header-content {
+    margin: 0 0; }
+    #MAIN #HEADER .container .header-content .header-left {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column; }
+    #MAIN #HEADER .container .header-content img.profile-pic {
+      height: 300px;
+      top: 0; }
+  #MAIN #HEADER .container .nav .links {
+    margin: .3rem 0; }
+    #MAIN #HEADER .container .nav .links a h3 {
+      font-size: 1rem; }
+  #MAIN .cube2 {
+    height: 250px; }
+  #MAIN #ACHIEVEMENTS .cube {
+    height: 270px; }
+  #MAIN #PROJECTS .container {
+    width: 80vw; }
+    #MAIN #PROJECTS .container .project-container .images .index-project .project-box .title {
+      font-size: .75rem; } }
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 40px; }
+  h2 {
+    font-size: 1.1rem; }
+  h3 {
+    font-size: 1.1rem; }
+  p {
+    font-size: 14px; }
+  #MAIN #HEADER .container {
+    width: 75vw; }
+    #MAIN #HEADER .container .header-content {
+      margin: 0 0; }
+      #MAIN #HEADER .container .header-content .header-left {
+        margin-top: 2rem;
+        margin-right: 1rem; }
+      #MAIN #HEADER .container .header-content img.profile-pic {
+        height: 300px;
+        top: 0; }
+    #MAIN #HEADER .container .nav .links {
+      margin: .3rem 0; }
+      #MAIN #HEADER .container .nav .links a h3 {
+        font-size: 1rem; }
+  #MAIN #ABOUT .container {
+    margin: 5rem auto;
+    width: 70vw; }
+    #MAIN #ABOUT .container .about-content .contact-links .link {
+      margin: 1rem 0; }
+      #MAIN #ABOUT .container .about-content .contact-links .link a {
+        color: #232340;
+        text-decoration: none;
+        font-size: .9rem;
+        margin: 0 .6rem; }
+        #MAIN #ABOUT .container .about-content .contact-links .link a i {
+          color: #52BE80;
+          font-size: 1.2rem; }
+          #MAIN #ABOUT .container .about-content .contact-links .link a i:hover {
+            transform: scale(1.3);
+            transition: all .5s ease-in-out; }
+    #MAIN #ABOUT .container .about-content .experience-with {
+      margin: 1rem 0; }
+    #MAIN #ABOUT .container .about-content .languages-list {
+      margin: 1rem 0;
+      width: 26vw;
+      display: grid;
+      grid-template-columns: 1fr 1fr; }
+  #MAIN #PROJECTS .container {
+    width: 80vw; }
+    #MAIN #PROJECTS .container .project-container {
+      padding: 5rem 0;
+      width: 80vw; }
+      #MAIN #PROJECTS .container .project-container h1 {
+        text-align: center; }
+      #MAIN #PROJECTS .container .project-container .images {
+        margin: 2rem auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        grid-gap: 0; }
+        #MAIN #PROJECTS .container .project-container .images .index-project {
+          align-items: center; }
+          #MAIN #PROJECTS .container .project-container .images .index-project img {
+            margin: 1rem;
+            width: 200px;
+            height: 200px; }
+          #MAIN #PROJECTS .container .project-container .images .index-project .project-link {
+            width: 80%;
+            text-align: center;
+            font-size: 1.2rem;
+            color: gray;
+            text-decoration: none;
+            margin: 0 auto; }
+          #MAIN #PROJECTS .container .project-container .images .index-project .project-box .text-animate {
+            opacity: 0;
+            background-color: #52BE80;
+            position: absolute;
+            top: 0;
+            margin: 1rem;
+            width: 200px;
+            height: 200px;
+            color: #232340; }
+          #MAIN #PROJECTS .container .project-container .images .index-project .project-box:hover .text-animate {
+            opacity: 1; }
+          #MAIN #PROJECTS .container .project-container .images .index-project .project-box .title {
+            font-size: .75rem;
+            text-align: left;
+            transition-delay: 0.2s;
+            transition-duration: 0.3s;
+            margin: 1rem 1rem 0 1rem; }
+      #MAIN #PROJECTS .container .project-container .project-bottom {
+        margin: 3rem 0; }
+        #MAIN #PROJECTS .container .project-container .project-bottom p {
+          text-align: center;
+          width: 40%;
+          margin: 0 auto; }
+  #MAIN .cube2 {
+    height: 200px; }
+  #MAIN #WORK-EXPERIENCE .container {
+    width: 80vw; }
+    #MAIN #WORK-EXPERIENCE .container .work-container {
+      margin: 10rem 0; }
+      #MAIN #WORK-EXPERIENCE .container .work-container h1 {
+        text-align: center; }
+      #MAIN #WORK-EXPERIENCE .container .work-container .work {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 4rem auto; }
+        #MAIN #WORK-EXPERIENCE .container .work-container .work .work-description {
+          padding: 3rem; }
+  #MAIN #ACHIEVEMENTS .cube {
+    left: -120px;
+    height: 250px; }
+  #MAIN #ACHIEVEMENTS .container .achievements-container .marks-section .marks {
+    margin: 0 2rem; }
+    #MAIN #ACHIEVEMENTS .container .achievements-container .marks-section .marks p {
+      margin-left: 3rem;
+      width: 20vw; }
+  #MAIN #FOOTER .footer-content {
+    max-width: 80vw; }
+    #MAIN #FOOTER .footer-content .contact-logo-section {
+      margin-right: 1rem; }
+      #MAIN #FOOTER .footer-content .contact-logo-section h3 {
+        font-size: 3rem;
+        margin: 1rem 0; }
+      #MAIN #FOOTER .footer-content .contact-logo-section p {
+        font-size: 1rem;
+        max-width: 40vw;
+        margin: 1rem 0; }
+    #MAIN #FOOTER .footer-content .links-section {
+      margin-left: 5rem; }
+      #MAIN #FOOTER .footer-content .links-section ul {
+        margin: 1rem; }
+        #MAIN #FOOTER .footer-content .links-section ul li {
+          list-style: none;
+          margin: 1.6rem 0; }
+          #MAIN #FOOTER .footer-content .links-section ul li a i {
+            font-size: 1.3rem;
+            margin: 0 2rem; }
+  #MAIN #FOOTER p.copy-right {
+    font-size: .8rem;
+    padding-bottom: 2rem; } }
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 40px; }
+  h2 {
+    font-size: 1.1rem; }
+  h3 {
+    font-size: 1.1rem; }
+  p {
+    font-size: 14px; }
+  #MAIN #HEADER .container {
+    width: 90vw; }
+    #MAIN #HEADER .container .header-content {
+      margin: 0 0;
+      justify-content: center; }
+      #MAIN #HEADER .container .header-content .header-left {
+        margin-top: 2rem;
+        width: 35vw; }
+      #MAIN #HEADER .container .header-content img.profile-pic {
+        height: 300px;
+        top: 0; }
+    #MAIN #HEADER .container .nav .links {
+      margin: 0; }
+      #MAIN #HEADER .container .nav .links a {
+        margin: .8rem .4rem; }
+        #MAIN #HEADER .container .nav .links a h3 {
+          font-size: .75rem; }
+  #MAIN #ABOUT .container {
+    margin: 5rem auto;
+    width: 70vw; }
+    #MAIN #ABOUT .container .about-content .contact-links .link {
+      margin: 1rem 0; }
+      #MAIN #ABOUT .container .about-content .contact-links .link a {
+        color: #232340;
+        text-decoration: none;
+        font-size: .9rem;
+        margin: 0 .6rem; }
+        #MAIN #ABOUT .container .about-content .contact-links .link a i {
+          color: #52BE80;
+          font-size: 1.2rem; }
+          #MAIN #ABOUT .container .about-content .contact-links .link a i:hover {
+            transform: scale(1.3);
+            transition: all .5s ease-in-out; }
+    #MAIN #ABOUT .container .about-content .experience-with {
+      margin: 1rem 0; }
+    #MAIN #ABOUT .container .about-content .languages-list {
+      margin: 1rem 0;
+      width: 26vw;
+      display: grid;
+      grid-template-columns: 1fr 1fr; }
+  #MAIN #PROJECTS .container {
+    width: 80vw; }
+    #MAIN #PROJECTS .container .project-container {
+      padding: 5rem 0;
+      width: 80vw; }
+      #MAIN #PROJECTS .container .project-container h1 {
+        text-align: center; }
+      #MAIN #PROJECTS .container .project-container .images {
+        margin: 2rem auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        grid-gap: 0; }
+        #MAIN #PROJECTS .container .project-container .images .index-project {
+          align-items: center; }
+          #MAIN #PROJECTS .container .project-container .images .index-project img {
+            margin: 1rem;
+            width: 170px;
+            height: 170px; }
+          #MAIN #PROJECTS .container .project-container .images .index-project .project-link {
+            width: 80%;
+            text-align: center;
+            font-size: 1.2rem;
+            color: gray;
+            text-decoration: none;
+            margin: 0 auto; }
+          #MAIN #PROJECTS .container .project-container .images .index-project .project-box .text-animate {
+            opacity: 0;
+            background-color: #52BE80;
+            position: absolute;
+            top: 0;
+            margin: 1rem;
+            width: 170px;
+            height: 170px;
+            color: #232340; }
+          #MAIN #PROJECTS .container .project-container .images .index-project .project-box:hover .text-animate {
+            opacity: 1; }
+          #MAIN #PROJECTS .container .project-container .images .index-project .project-box .title {
+            font-size: .7rem;
+            text-align: left;
+            transition-delay: 0.2s;
+            transition-duration: 0.3s;
+            margin: 1rem 1rem 0 1rem; }
+      #MAIN #PROJECTS .container .project-container .project-bottom {
+        margin: 3rem 0; }
+        #MAIN #PROJECTS .container .project-container .project-bottom p {
+          text-align: center;
+          width: 60%;
+          margin: 0 auto; }
+  #MAIN .cube2 {
+    position: absolute;
+    height: 180px;
+    right: 10px;
+    overflow-x: hidden; }
+  #MAIN #WORK-EXPERIENCE .container {
+    width: 50vw; }
+    #MAIN #WORK-EXPERIENCE .container .work-container {
+      margin: 5rem 0; }
+      #MAIN #WORK-EXPERIENCE .container .work-container h1 {
+        text-align: center; }
+      #MAIN #WORK-EXPERIENCE .container .work-container .work {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 4rem auto; }
+        #MAIN #WORK-EXPERIENCE .container .work-container .work .work-info {
+          margin-bottom: 2rem; }
+        #MAIN #WORK-EXPERIENCE .container .work-container .work .work-description {
+          padding: 1.5rem; }
+  #MAIN #ACHIEVEMENTS .cube {
+    left: -100px;
+    height: 200px; }
+  #MAIN #ACHIEVEMENTS .container {
+    width: 70vw; }
+    #MAIN #ACHIEVEMENTS .container .achievements-container {
+      padding: 5rem 0; }
+      #MAIN #ACHIEVEMENTS .container .achievements-container .marks-section {
+        display: flex;
+        flex-direction: column; }
+        #MAIN #ACHIEVEMENTS .container .achievements-container .marks-section .marks {
+          margin: 0 2rem; }
+          #MAIN #ACHIEVEMENTS .container .achievements-container .marks-section .marks h2.twenty {
+            font-size: 1rem; }
+            #MAIN #ACHIEVEMENTS .container .achievements-container .marks-section .marks h2.twenty span {
+              font-size: 4rem; }
+          #MAIN #ACHIEVEMENTS .container .achievements-container .marks-section .marks h3 {
+            font-size: 1.6rem; }
+          #MAIN #ACHIEVEMENTS .container .achievements-container .marks-section .marks h2 {
+            margin-top: 0; }
+          #MAIN #ACHIEVEMENTS .container .achievements-container .marks-section .marks p {
+            margin-left: 3rem;
+            width: 40vw; }
+  #MAIN #FOOTER .footer-content {
+    max-width: 80vw; }
+    #MAIN #FOOTER .footer-content .contact-logo-section {
+      margin-right: 1rem; }
+      #MAIN #FOOTER .footer-content .contact-logo-section h3 {
+        font-size: 2.2rem;
+        margin: 1rem 0; }
+      #MAIN #FOOTER .footer-content .contact-logo-section p {
+        font-size: .9rem;
+        max-width: 40vw;
+        margin: 1rem 0; }
+    #MAIN #FOOTER .footer-content .links-section {
+      margin-left: 5rem; }
+      #MAIN #FOOTER .footer-content .links-section ul {
+        margin: 1rem; }
+        #MAIN #FOOTER .footer-content .links-section ul li {
+          list-style: none;
+          margin: 1.6rem 0; }
+          #MAIN #FOOTER .footer-content .links-section ul li a i {
+            font-size: 1.3rem;
+            margin: 0 2rem; }
+  #MAIN #FOOTER p.copy-right {
+    font-size: .8rem;
+    padding-bottom: 2rem; } }
+
+@media screen and (max-width: 414px) {
+  h1 {
+    font-size: 25px; }
+  h2 {
+    font-size: 1rem; }
+  h3 {
+    font-size: 1rem; }
+  p {
+    font-size: 13px; }
+  #MAIN #HEADER .container {
+    width: 90vw; }
+    #MAIN #HEADER .container .header-content {
+      margin: 0 0;
+      justify-content: center; }
+      #MAIN #HEADER .container .header-content .header-left {
+        margin-top: 5rem;
+        width: 35vw;
+        text-align: center; }
+      #MAIN #HEADER .container .header-content img.profile-pic {
+        margin-top: 2rem;
+        height: 250px;
+        bottom: 0; }
+    #MAIN #HEADER .container .nav .links {
+      margin: 0; }
+      #MAIN #HEADER .container .nav .links a {
+        margin: .8rem .4rem; }
+        #MAIN #HEADER .container .nav .links a h3 {
+          font-size: .75rem; }
+  #MAIN #ABOUT .container {
+    margin: 2rem auto;
+    width: 70vw; }
+    #MAIN #ABOUT .container .about-content .contact-links .link {
+      margin: .6rem 0; }
+      #MAIN #ABOUT .container .about-content .contact-links .link a {
+        color: #232340;
+        text-decoration: none;
+        font-size: .8rem;
+        margin: 0 .3rem; }
+        #MAIN #ABOUT .container .about-content .contact-links .link a i {
+          color: #52BE80;
+          font-size: 1rem; }
+          #MAIN #ABOUT .container .about-content .contact-links .link a i:hover {
+            transform: scale(1.3);
+            transition: all .5s ease-in-out; }
+    #MAIN #ABOUT .container .about-content .experience-with {
+      margin: 1rem 0; }
+    #MAIN #ABOUT .container .about-content .languages-list {
+      margin: 1rem 0;
+      width: 35vw;
+      display: grid;
+      grid-template-columns: 1fr 1fr; }
+  #MAIN #PROJECTS .container {
+    width: 80vw; }
+    #MAIN #PROJECTS .container .project-container {
+      padding: 5rem 0;
+      width: 80vw; }
+      #MAIN #PROJECTS .container .project-container h1 {
+        text-align: center; }
+      #MAIN #PROJECTS .container .project-container .images {
+        margin: 2rem auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        grid-gap: .5rem; }
+        #MAIN #PROJECTS .container .project-container .images .index-project {
+          justify-content: center;
+          align-items: center; }
+          #MAIN #PROJECTS .container .project-container .images .index-project img {
+            margin: 1rem;
+            width: 230px;
+            height: 230px; }
+          #MAIN #PROJECTS .container .project-container .images .index-project .project-link {
+            width: 80%;
+            text-align: center;
+            font-size: 1.2rem;
+            color: gray;
+            text-decoration: none;
+            margin: 0 auto; }
+          #MAIN #PROJECTS .container .project-container .images .index-project .project-box .text-animate {
+            opacity: 0;
+            background-color: #52BE80;
+            position: absolute;
+            top: 0;
+            margin: 1rem;
+            width: 230px;
+            height: 230px;
+            color: #232340; }
+          #MAIN #PROJECTS .container .project-container .images .index-project .project-box:hover .text-animate {
+            opacity: 1; }
+          #MAIN #PROJECTS .container .project-container .images .index-project .project-box .title {
+            font-size: .75rem;
+            text-align: left;
+            transition-delay: 0.2s;
+            transition-duration: 0.3s;
+            margin: 1rem 1rem 0 1rem; }
+      #MAIN #PROJECTS .container .project-container .project-bottom {
+        margin: 3rem 0; }
+        #MAIN #PROJECTS .container .project-container .project-bottom p {
+          text-align: center;
+          width: 60%;
+          margin: 0 auto; }
+  #MAIN .cube2 {
+    position: absolute;
+    height: 140px;
+    right: 10px;
+    overflow-x: hidden; }
+  #MAIN #WORK-EXPERIENCE .container {
+    width: 70vw; }
+    #MAIN #WORK-EXPERIENCE .container .work-container {
+      margin: 5rem 0; }
+      #MAIN #WORK-EXPERIENCE .container .work-container h1 {
+        text-align: center; }
+      #MAIN #WORK-EXPERIENCE .container .work-container .work {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 4rem auto; }
+        #MAIN #WORK-EXPERIENCE .container .work-container .work .work-info {
+          margin-bottom: 2rem; }
+        #MAIN #WORK-EXPERIENCE .container .work-container .work .work-description {
+          padding: 1.5rem; }
+  #MAIN #ACHIEVEMENTS .cube {
+    left: -70px;
+    height: 150px; }
+  #MAIN #ACHIEVEMENTS .container {
+    width: 70vw; }
+    #MAIN #ACHIEVEMENTS .container .achievements-container {
+      padding: 5rem 0; }
+      #MAIN #ACHIEVEMENTS .container .achievements-container .marks-section {
+        display: flex;
+        flex-direction: column; }
+        #MAIN #ACHIEVEMENTS .container .achievements-container .marks-section .marks {
+          margin: 0 2rem; }
+          #MAIN #ACHIEVEMENTS .container .achievements-container .marks-section .marks h2.twenty {
+            font-size: 1rem; }
+            #MAIN #ACHIEVEMENTS .container .achievements-container .marks-section .marks h2.twenty span {
+              font-size: 3rem; }
+          #MAIN #ACHIEVEMENTS .container .achievements-container .marks-section .marks h3 {
+            font-size: 1.2rem; }
+          #MAIN #ACHIEVEMENTS .container .achievements-container .marks-section .marks h2 {
+            margin-top: 0;
+            font-size: 1rem;
+            padding-top: .5rem; }
+          #MAIN #ACHIEVEMENTS .container .achievements-container .marks-section .marks p {
+            margin-left: 3rem;
+            width: 40vw; }
+  #MAIN #FOOTER .footer-content {
+    max-width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    #MAIN #FOOTER .footer-content .contact-logo-section {
+      margin: 0;
+      text-align: center; }
+      #MAIN #FOOTER .footer-content .contact-logo-section h3 {
+        font-size: 2.2rem;
+        margin: 1rem 0; }
+      #MAIN #FOOTER .footer-content .contact-logo-section p {
+        font-size: .9rem;
+        max-width: 80vw;
+        margin: 1rem 0; }
+    #MAIN #FOOTER .footer-content .links-section {
+      margin: 0; }
+      #MAIN #FOOTER .footer-content .links-section ul {
+        margin: 0; }
+        #MAIN #FOOTER .footer-content .links-section ul li {
+          list-style: none;
+          margin: 1.6rem 0; }
+          #MAIN #FOOTER .footer-content .links-section ul li a i {
+            font-size: 1.3rem;
+            margin: 0 1rem; }
+  #MAIN #FOOTER p.copy-right {
+    font-size: .8rem;
+    padding-bottom: 2rem; } }
+
+@media screen and (max-width: 375px) {
+  h1 {
+    font-size: 25px; }
+  h2 {
+    font-size: 1rem; }
+  h3 {
+    font-size: 1rem; }
+  p {
+    font-size: 13px; }
+  #MAIN #HEADER .container {
+    width: 90vw; }
+    #MAIN #HEADER .container .header-content {
+      margin: 0 0;
+      justify-content: center; }
+      #MAIN #HEADER .container .header-content .header-left {
+        margin-top: 5rem;
+        width: 35vw;
+        text-align: center; }
+      #MAIN #HEADER .container .header-content img.profile-pic {
+        margin-top: 2rem;
+        height: 200px;
+        bottom: 0; }
+    #MAIN #HEADER .container .nav .links {
+      margin: 0; }
+      #MAIN #HEADER .container .nav .links a {
+        margin: .8rem .4rem; }
+        #MAIN #HEADER .container .nav .links a h3 {
+          font-size: .75rem; } }
+
+@media screen and (max-width: 320px) {
+  h1 {
+    font-size: 1.4rem; }
+  h2 {
+    font-size: .8rem; }
+  h3 {
+    font-size: .9rem; }
+  p {
+    font-size: 13px; }
+  #MAIN #HEADER .container {
+    width: 90vw; }
+    #MAIN #HEADER .container .header-content {
+      margin: 0 0;
+      justify-content: center; }
+      #MAIN #HEADER .container .header-content .header-left {
+        margin-top: 5rem;
+        width: 35vw;
+        text-align: center;
+        margin-right: 0; }
+        #MAIN #HEADER .container .header-content .header-left p {
+          margin: .5rem 0;
+          font-size: .6rem; }
+      #MAIN #HEADER .container .header-content img.profile-pic {
+        margin-top: 2rem;
+        height: 200px;
+        bottom: 0; }
+    #MAIN #HEADER .container .nav .links {
+      margin: 0; }
+      #MAIN #HEADER .container .nav .links a {
+        margin: .8rem .4rem; }
+        #MAIN #HEADER .container .nav .links a h3 {
+          font-size: .75rem; }
+  #MAIN #ABOUT .container {
+    margin: 2rem auto;
+    width: 70vw; }
+    #MAIN #ABOUT .container .about-content .contact-links .link {
+      margin: .6rem 0; }
+      #MAIN #ABOUT .container .about-content .contact-links .link a {
+        color: #232340;
+        text-decoration: none;
+        font-size: .8rem;
+        margin: 0 .3rem; }
+        #MAIN #ABOUT .container .about-content .contact-links .link a i {
+          color: #52BE80;
+          font-size: 1rem; }
+          #MAIN #ABOUT .container .about-content .contact-links .link a i:hover {
+            transform: scale(1.3);
+            transition: all .5s ease-in-out; }
+    #MAIN #ABOUT .container .about-content .experience-with {
+      margin: 1rem 0; }
+    #MAIN #ABOUT .container .about-content .languages-list {
+      margin: 1rem 0;
+      width: 55vw;
+      display: grid;
+      grid-template-columns: 1fr 1fr; } }
+
+/*Animations*/
+@-moz-keyframes pop-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes pop-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes pop-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes pop-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.animate-pop-in {
+  -moz-animation: pop-in 3s forwards;
+  -webkit-animation: pop-in 3s forwards;
+  -o-animation: pop-in 3s forwards;
+  animation: pop-in 3s forwards;
+  opacity: 0; }
+
+.dark {
+  animation-delay: .1s; }
+
+.header-content {
+  animation-delay: .2s; }
+
+.container {
+  animation-delay: .5s; }

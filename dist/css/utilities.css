@@ -1,0 +1,172 @@
+.container {
+  width: 65vw;
+  margin: 0 auto;
+  padding: 0; }
+
+.dark {
+  background: whitesmoke; }
+
+.light {
+  background: white; }
+
+.sc {
+  background: #52BE80; }
+
+h1 {
+  font-family: "Raleway", sans-serif;
+  color: #1F1E62;
+  font-size: 64px;
+  line-height: 1.7;
+  letter-spacing: -.5px;
+  font-weight: 700; }
+
+h2 {
+  font-family: "Rubik", "Arial", sans-serif;
+  color: #1F1E62;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  letter-spacing: -.5px;
+  font-weight: 700; }
+
+h3 {
+  font-family: "Rubik", "Arial", sans-serif;
+  color: #52BE80;
+  font-size: 1.6rem; }
+
+p {
+  font-family: "Rubik", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 1.35;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #232340; }
+
+.center-end-hover {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 2px; }
+  .center-end-hover:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    background-color: whitesmoke;
+    transition: transform 0.4s; }
+  .center-end-hover:hover:after {
+    transform: scaleX(1); }
+
+.left-to-right {
+  font-size: 1.1rem;
+  text-align: center;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding-bottom: 5px; }
+  .left-to-right:hover {
+    transform: scale(1);
+    transition: transform .5s ease; }
+  .left-to-right:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.4s; }
+  .left-to-right:hover:after {
+    transform: scale(1); }
+
+#PROJECTS .container .project-container {
+  padding: 10rem 0; }
+  #PROJECTS .container .project-container h1 {
+    text-align: center; }
+  #PROJECTS .container .project-container .images {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; }
+    #PROJECTS .container .project-container .images .index-project {
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column; }
+      #PROJECTS .container .project-container .images .index-project img {
+        margin: 1rem;
+        width: 270px;
+        height: 270px; }
+      #PROJECTS .container .project-container .images .index-project .project-link {
+        width: 80%;
+        text-align: center;
+        font-size: 1.2rem;
+        color: gray;
+        text-decoration: none;
+        margin: 0 auto; }
+        #PROJECTS .container .project-container .images .index-project .project-link h2 {
+          transition: all .5s; }
+          #PROJECTS .container .project-container .images .index-project .project-link h2:hover {
+            color: #52BE80; }
+      #PROJECTS .container .project-container .images .index-project .project-box .text-animate {
+        opacity: 0;
+        background-color: #52BE80;
+        position: absolute;
+        top: 0;
+        margin: 1rem;
+        width: 270px;
+        height: 270px;
+        color: #232340;
+        -webkit-transition: all 300ms ease-out;
+        -moz-transition: all 300ms ease-out;
+        -o-transition: all 300ms ease-out;
+        -ms-transition: all 300ms ease-out;
+        transition: all 300ms ease-out;
+        animation: animated-border 2s infinite; }
+      #PROJECTS .container .project-container .images .index-project .project-box:hover .text-animate {
+        opacity: 1; }
+      #PROJECTS .container .project-container .images .index-project .project-box .text {
+        -webkit-transition: all 300ms ease-out;
+        -moz-transition: all 300ms ease-out;
+        -o-transition: all 300ms ease-out;
+        -ms-transition: all 300ms ease-out;
+        transition: all 300ms ease-out;
+        transform: translateY(30px);
+        -webkit-transform: translateY(30px); }
+      #PROJECTS .container .project-container .images .index-project .project-box .title {
+        font-size: 1rem;
+        text-align: left;
+        transition-delay: 0.2s;
+        transition-duration: 0.3s;
+        margin: 2.3rem 1.5rem 0 1.5rem; }
+      #PROJECTS .container .project-container .images .index-project .project-box:hover .title,
+      #PROJECTS .container .project-container .images .index-project .project-box:focus .title {
+        opacity: 1;
+        transform: translateY(0px);
+        -webkit-transform: translateY(0px); }
+  #PROJECTS .container .project-container .project-bottom {
+    margin: 3rem 0; }
+    #PROJECTS .container .project-container .project-bottom p {
+      text-align: center;
+      width: 40%;
+      margin: 0 auto; }
+
+.btn {
+  text-align: center;
+  border-radius: 40px;
+  background: #52BE80;
+  border: 2px solid #52BE80;
+  color: white;
+  cursor: pointer;
+  transition: all .6s ease;
+  padding: .3rem .8rem;
+  text-transform: uppercase;
+  text-decoration: none; }
+  .btn:hover {
+    color: #52BE80;
+    background: transparent; }
