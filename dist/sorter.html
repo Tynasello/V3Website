@@ -32,7 +32,10 @@
             <i></i>
             <h2>Purpose</h2>
             <p>
-              The purpose of this project was to create a system that would sort objects based on color. I chose skittles as the objects to be sorted. Two micro servo motors were used in the project; one to pick up the skittles and one to drop them into designated cups. A TCS230 color sensor was used to read the color. Red, green, and yellow skittles were sorted and dropped into corresponding cups.
+              The purpose of this project was to create a system that would sort Skittles based on color.
+                Two micro servo motors were used in the project; one to pick up
+                the Skittles, and one to drop them into designated cups. A TCS230 color sensor was used to read
+                color. Red, green, and yellow skittles were sorted and dropped into corresponding cups.
                 <img src="images/sorter/sorter.jpg" alt="">
 
             </p>
@@ -43,8 +46,10 @@
             <i></i>
             <h2>Micro Controller</h2>
               <p>
-                  The arduino uno is a microcontroller that is responsible for commanding the two servos and the
-                  color sensor. Code is sent from my laptop to the arduino. The arduino has digital input/output pins and analog pins that are responsible for sending and receiving data. The arduino is powered via a USB port.
+                  The Arduino Uno is a microcontroller that is responsible for commanding the two servos and the
+                  color sensor. The Arduino has digital input/output pins
+                  and analog pins that are responsible for sending and receiving data. The arduino is powered via a
+                  USB port.
                   <img src="images/car/arduino.png" alt="">
               </p>
           </li>
@@ -54,7 +59,11 @@
             <i></i>
             <h2>Micro Servo Motors</h2>
               <p>
-                  Two micro servo motors were used in this project. One was attached to the circular rotating platform and was designed to pick a skittle up from the entry tube. It was then transferred underneath the sensor where the color could be calculated. The skittle was then dropped onto the slide. The second servo was responsible for properly angling the slide to the correct cup, based upon the color of the skittle previously detected.
+                  Two micro servo motors were used in this project. One was attached to a circular rotating
+                  platform designed to pick a Skittle up from an entry tube. The servo then positioned the Skittle
+                  underneath the sensor where color determination occurred. Lastly, The Skittle was dropped onto
+                  the slide where it would fall into a desired cup. The second servo was responsible for properly
+                  angling the slide.
                   <img src="images/sorter/servo.png" alt="">
               </p>
           </li>
@@ -64,10 +73,10 @@
             <i></i>
             <h2>TCS230 Color Sensor</h2>
               <p>
-                  The color sensor contains 64 photodiodes in total, 16 red, 16 green, 16 blue, and 16 clear. The
-                  photodiodes on the color sensor are responsible for sensing the color of the skittles. The sensor's
-                  readings are converted from current to frequency allowing the arduino to determine the skittle's
-                  color. A website that assisted me in my understanding of how the TCS230 color sensor works can be
+                  The color sensor contains 64 photodiodes, evenly distributed as red, green, blue and clear which
+                  are responsible for color readings. The TCS230's
+                  readings are converted from current to frequency allowing the Arduino to differentiate between
+                  skittle color. A website that assisted my understanding of the TCS230 can be
                   found <a class="intext-link center-end-hover" target="_blank"
                    href="https://howtomechatronics.com/tutorials/arduino/arduino-color-sensing-tutorial-tcs230-tcs3200-color-sensor/">here</a>.
                   <img src="images/sorter/color-sensor.png" alt="">
@@ -79,7 +88,12 @@
             <i></i>
             <h2>Framework</h2>
               <p>
-                  The frame was built out of scrap wood that I cut, hand sanded and drilled together. The rotating platform was hand made and fitted to one of the servos. It was designed to pickup skittles from the entry pipe and bring them directly underneath the color sensor. They were then transported to a drilled hole in the shelf where they would fall onto the slide. The slide was designed using the back of a drywall corner bead. It was strategically shaped to function like a slide. The pipe was cut from a roll of rubber hosing and was used to house the skittles to be sorted.
+                  The frame was built out of scrap wood that I cut, hand sanded and drilled together. The rotating
+                  platform was hand made and fitted to one of the servos. It was designed to pickup skittles from the
+                  entry pipe (part of rubber hosing) and bring them directly underneath the color sensor. They were
+                  then transported to a
+                  drilled hole in the shelf where they would fall onto the slide, which was designed using the back
+                  of a drywall corner bead.
                   <img src="images/sorter/sorter.jpg" alt="">
               </p>
           </li>
@@ -91,7 +105,15 @@
             <h2>Coding</h2>
               <p>
                   The program to control this robot was written in the <a class="intext-link center-end-hover" target="_blank"
-                   href="https://www.arduino.cc/en/software">Arduino IDE</a> using the programming language C/C++. The Servo.h library was included to control the two micro servos. Two micro servo objects were created, one for the job of picking up the skittles, and the other for setting the path towards a certain cup. The micro servos were controlled using the write() function that would turn the servos based on the degree amount inputted. The TCS230 color sensor was utilized by using the pulseIn() function that would read the output frequency detected by the sensor. These values were then inserted into three different if statements (one for red, green, and yellow) that would determine skittle color based on pre-determined frequency numbers that corresponded to each color. A link to my github repository for this code is below. <br>
+                   href="https://www.arduino.cc/en/software">Arduino IDE</a> using the programming language C/C++.
+                  The Servo.h library was included to control the two micro servos. Two micro servo objects were
+                  created, one for the job of picking up the skittles, and the other for setting the path towards a
+                  certain cup. The micro servos were controlled using the write() function that would turn the servos
+                  based on the degree amount inputted. The TCS230 color sensor was utilized by using the pulseIn()
+                  function that would read the output frequency detected by the sensor. These values were then
+                  inserted into three different if statements (one for red, green, and yellow) that would determine
+                  skittle color based on pre-determined frequency numbers that corresponded to each color. A link to
+                  my github repository for this code is below. <br>
                   <br><a class="btn" href="https://github.com/Tynasello?tab=repositories" target="_blank">
                       Github</a> <br><br>
               </p>
@@ -102,13 +124,19 @@
             <i class="accor"></i>
             <h2>Challenges</h2>
               <p>
-                  Throughout this project I faced two significant issues that I had to overcome. The first was the inability of the arduino to accurately differentiate color as a result of color frequencies being too similar. To remedy, I continually adjusted the distance between the platform and the sensor allowing more variety in frequency numbers to occur. The arduino could now distinguish between different colors.
-
-The second problem was getting the entry tube for the skittles to work properly. I originally had a transparent piece
+                  Throughout this project I faced two significant issues. The first was the
+                  inability of the Arduino to accurately differentiate color. This was result of color
+                  frequencies being
+                  too similar. To remedy, I continually adjusted the distance between the platform and the sensor
+                  allowing more variety in frequency numbers to occur. The Arduino could now distinguish between
+                  different colors.
+                  <br><br>
+                  The second problem was getting the entry tube for the skittles to reliably work. I originally had a
+                  transparent piece
                   of tubing, however, the diameter of the tube was approximately a 1/8" larger than that of a
-                  skittle. This extra room allowed skittles to topple to the sides of each other which resulted in
-                  them getting stuck. After experimenting with various sized tubes, I eventually found a size which
-                  functioned reliably.
+                  skittle. This extra room allowed skittles to topple to the sides of each other, resulting in
+                  them getting stuck. After experimenting with various diameters, I eventually found a size which
+                  functioned dependably.
               </p>
           </li>
 

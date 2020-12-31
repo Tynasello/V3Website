@@ -193,7 +193,7 @@ body {
   background-size: cover; }
   #MAIN #HEADER .container .header-content {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin: 0 5rem; }
     #MAIN #HEADER .container .header-content .header-left {
@@ -203,10 +203,9 @@ body {
       #MAIN #HEADER .container .header-content .header-left p {
         margin: 1rem 0; }
     #MAIN #HEADER .container .header-content img.profile-pic {
-      height: 400px;
+      height: 600px;
       position: relative;
-      bottom: 0;
-      margin-top: 6rem; }
+      bottom: 0; }
   #MAIN #HEADER .container .nav {
     position: absolute;
     background: transparent;

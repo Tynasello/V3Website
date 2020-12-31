@@ -202,6 +202,12 @@ html {
   background-size: cover;
   background-attachment: fixed; }
 
+#nfl-scrape {
+  background-color: #40efff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%233d24ff' stroke-width='66.7' stroke-opacity='0.05' %3E%3Ccircle fill='%2340efff' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%2337e0f4' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%2330d1e9' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%2329c3dd' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%2325b4d1' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%2321a6c4' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%231f98b7' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%231d8aaa' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%231c7c9d' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%231b6f8f' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23196281' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23175674' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%23154966' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%23123e58' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%230f324b' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%230b273d' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%23071d30' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23021224' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover; }
+
 body {
   padding: 0;
   margin: 0; }
@@ -278,6 +284,9 @@ p {
     width: 70%;
     margin: 1rem auto;
     border-radius: 3px; }
+  p #team_stats_image {
+    margin: 0;
+    width: 100%; }
   p video {
     display: block;
     margin: auto; }

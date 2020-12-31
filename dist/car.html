@@ -32,12 +32,12 @@
             <i></i>
             <h2>Purpose</h2>
             <p>
-              The purpose of this project was to create a fully functional robot using an arduino microcontroller
-                that could be controlled by a mobile device. The robot performs certain maneuvers based on input from
-                a bluetooth terminal application.
+              The purpose of this project was to create a fully functional robot using an Arduino microcontroller. The
+                robot performs certain maneuvers based on input from
+                a Bluetooth terminal application.
                 <img src="images/car/robotside.jpg" alt="">
                 The robot has an optional "autonomous mode" which can be activated by typing the character 'a'
-                through a bluetooth terminal app on a cellular device. When autonomous mode is activated, the robot
+                through a Bluetooth terminal on a cellular device. When autonomous mode is activated, the robot
                 will drive forward until the ultrasonic sensor on the front of the chassis detects that an object is
                 within 10 cm. The robot will then redirect its route and continue driving forward until another object is encountered.
             </p>
@@ -47,7 +47,12 @@
             <input type="checkbox" checked>
             <i></i>
             <h2>Micro Controller</h2>
-              <p>The arduino uno is a microcontroller that is responsible for commanding all parts of the robot. The arduino has digital input/output pins and analog pins that are responsible for sending and receiving data. The analog pins of the arduino allow the use of the ultrasonic sensor. The digital pins allow the use of the HC-08 bluetooth module. The arduino is powered by a USB powerbank via the USB port.
+              <p>The Arduino Uno is a microcontroller that is responsible for commanding all parts of the robot. The
+                  Arduino has digital input/output pins and analog pins that are responsible for sending and
+                  receiving data. The analog pins of the arduino allow the use of the ultrasonic sensor while the
+                  digital
+                  pins allow the use of the HC-08 bluetooth module. The Arduino is powered by a powerbank via the
+                  USB port.
                   <img src="images/car/arduino.png" alt="">
               </p>
           </li>
@@ -57,7 +62,13 @@
             <i></i>
             <h2>Motor Controller</h2>
               <p>
-                  The L293D Motor Controller Shield controls the two motors on the chassis, receiving instructions from the Arduino UNO. The L293D allows the forward and backward movements of the wheels at various speeds. The wires of the motors are inserted and fastened down into the M1 (DC Motor 1) and M3 (DC Motor 2) terminal blocks, allowing the arduino to control the motors. The shield attaches directly on top of the Arduino and plugs into the input/output pins. Since the shield blocks direct access to the arduino's pins, wires were soldered onto the shield to allow the use of the pins, which are essential to use of the bluetooth module, breadboard and ultrasonic sensor.
+                  The L293D Motor Controller Shield operates the two motors on the chassis, receiving instructions
+                  from the Arduino Uno. The L293D allows wheel movement at various
+                  speeds. Motor wires are connected to the M1 (DC Motor 1) and M3 (DC
+                  Motor 2) terminal blocks, allowing control via the Arduino. The shield attaches directly
+                  on top of the Arduino and plugs into the input/output pins. Since the shield blocks direct access
+                  to the arduino's pins, wires were soldered onto the shield to allow the use of the pins, which are
+                  essential to use of the bluetooth module, breadboard and ultrasonic sensor.
                   <img src="images/car/l293d.png" alt="">
               </p>
           </li>
@@ -67,7 +78,11 @@
             <i></i>
             <h2>Bluetooth Module</h2>
               <p>
-                  All actions performed by the robot are due to input from a mobile device using an HC-08 bluetooth module. The RX (Receiving) pin on the module connects to the TX (Transmitting) pin on the arduino board, and the TX pin on the module connects to the RX pin on the arduino. This allows data to be transferred between a device and the arduino. As a result, when specific characters are sent via a bluetooth terminal app to the arduino, certain maneuvers can be performed by the robot.
+                  All actions performed by the robot are due to input from a mobile device using an HC-08 bluetooth
+                  module. The RX (Receiving) pin on the module connects to the TX (Transmitting) pin on the Arduino,
+                  and the TX pin on the module connects to the RX pin on the Arduino. This connection allows data to be
+                  transferred between a device and the Arduino. As a result, when specific characters are sent via
+                  Bluetooth to the Arduino, the robot performs corresponding movements.
                   <img src="images/car/hc-08.png" alt="">
               </p>
           </li>
@@ -77,7 +92,11 @@
             <i></i>
             <h2>Chassis</h2>
               <p>
-                  The chassis consists of two motors and two wheels. The Arduino and L293D bridge are fitted in the middle of the chassis. The breadboard, which contains the ultrasonic sensor and allows circuits to be built, is secured at the front of the chassis. The bluetooth module, as well as some loose wires are strapped to the chassis with a zip tie. The USB power bank, which supplies power to the robot, is fastened to the bottom, rear portion of the chassis, using metal strapping.
+                  The chassis consists of two motors and two wheels. The Arduino and L293D bridge are fitted in the
+                  middle of the chassis. The breadboard, which contains the ultrasonic sensor and allows circuits to
+                  be built, is secured at the front of the chassis. The bluetooth module, as well as some loose wires
+                  are strapped to the chassis with a zip tie. The USB power bank, which supplies power to the robot,
+                  is fastened to the bottom, rear portion of the chassis, using metal strapping.
                   <img src="images/car/chassis.png" alt="">
               </p>
           </li>
@@ -91,13 +110,13 @@
                   The program to control this robot was written in the <a class="intext-link center-end-hover" target="_blank"
                    href="https://www.arduino.cc/en/software">Arduino IDE</a> using the
                   programming
-                  language
-                  C/C++. The AFMotor.h library was included to provide simultaneous speed and directional control for
+                  language C++. The AFMotor.h library was included to provide simultaneous speed and directional control for
                   the motors alongside the L293D shield. The NewPing.h library was included to incorporate ultrasonic
-                  sensor functionality. The library provides ultrasonic sensor functionality. Lastly, the
+                  sensor functionality. Lastly, the
                   SoftwareSerial.h library was included to allow serial communication between a mobile device and the
-                  Arduino via the HC-08. This allows the robot to move in certain directions based on input data from
-                  a device. A link to my code for this project can be found below <br><br>
+                  Arduino via the HC-08. This allows the robot to move in certain directions based on input data
+                  received from
+                  a device. A link to my code for this project can be found below. <br><br>
                   <a class="btn" href="https://github.com/Tynasello?tab=repositories" target="_blank">
                       Github</a> <br><br>
               </p>
