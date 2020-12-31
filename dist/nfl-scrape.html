@@ -55,7 +55,7 @@
                 This project was coded in Python 3.8. The BeautifulSoup module was imported to allow the
                 data scrape of
                 <a
-                        class="intext-link center-end-hover"
+                        class="intext-link center-end-hover" target="_blank"
                         href="https://www.espn.com/nfl/stats/team/_/view/offense/stat/passing/table/passing/sort/netPassingYards/dir/desc">ESPN</a>.
                 A BeautifulSoup object named soup was created and used to find the container holding team names
                 and team stats, as
@@ -72,7 +72,10 @@
                 container variables in similar manner as the soup object
                 <br><br>
                 Unfortunately, team wins were not displayed on the passing stats chart, therefore I scraped them from
-                <a href="https://www.espn.com/nfl/standings/_/group/league">here</a> in the same way as before.
+                <a class="intext-link center-end-hover" target="_blank" href="https://www.espn.com/nfl/standings/_/group/league">
+                    here</a> in the same
+                way as
+                before.
                 With all extracted data, I created a dictionary. Each value had an appropriate key describing what
                 stat the value represented.
                 <br><BR>
@@ -90,7 +93,7 @@
                 dictionary and wrote them to wins_yards.csv using the same method described above. Data In
                 wins_yards.csv was then used to determine the correlation between team wins and passing yards.
 
-                <br><br><a class="btn" href="https://github.com/Tynasello?tab=repositories" target="_blank">
+                <br><br><a class="btn" href="https://github.com/Tynasello/NFL-statistic-data-scraper" target="_blank">
                     Github</a><br><br>
             </p>
           </li>
