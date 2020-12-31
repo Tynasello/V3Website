@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name = "keywords" content = "Ty Nasello">
+    <meta name = "author" content = "Ty Nasello">
+    <meta name="description" content="Flappy Bird Project">
+    <script src="https://kit.fontawesome.com/4991e1abeb.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Merriweather:wght@900&family=Noto+Serif&family=Source+Serif+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&family=Sansita+Swashed:wght@300&display=swap" rel="stylesheet">
+    <link rel="shortcut icon"  href="./images/other/favicon.ico">
+    <link rel="stylesheet" href="css/project.css">
+     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous">
+     </script>
+    <title>NFL Statistics Data Scraper</title>
+
+
+</head>
+<body id="nfl-scrape">
+    <a class="left-to-right" href="index.html#PROJECTS">Home</a>
+
+    <div id="main">
+        <h1>NFL Statistic Data Scraper</h1>
+        <ul>
+          <li>
+            <input type="checkbox" checked>
+            <i></i>
+            <h2>Purpose</h2>
+            <p>
+                The purpose of this project was to see if there is a correlation between the amount of wins a team
+                has, and the amount of yards they have passed for. I data scraped espn.com to retrieve the
+                passing stats of each team in the NFL, alongside the amount of wins they have in the 2020-2021
+                season. This data was pushed to a CSV file entitled team_stats.
+                <br><br>
+                <img id="team_stats_image" src="images/nfl-scraper/team_stats.png" alt="">
+                <br><br>
+                For this project, only the team name, amount of wins, and passing yards was relevant. Therefore, I
+                extracted those values for each team and created a new CSV file entitled wins_yards. The correlation
+                coefficient equation was then used to find if there was a relation between the amount of wins for a
+                team, and the amount of yards they have passed for.
+
+            </p>
+          </li>
+          <li>
+            <input type="checkbox" checked>
+            <i></i>
+            <h2>Coding</h2>
+            <p>
+                <br><span style="font-weight: bold">Data Scraping</span>
+                <br><br>
+                This project was coded in Python 3.8. The BeautifulSoup module was imported to allow the
+                data scrape of
+                <a
+                        class="intext-link center-end-hover"
+                        href="https://www.espn.com/nfl/stats/team/_/view/offense/stat/passing/table/passing/sort/netPassingYards/dir/desc">ESPN</a>.
+                A BeautifulSoup object named soup was created and used to find the container holding team names
+                and team stats, as
+                they were held in different places.
+                <br><br>
+                <code style="font-size: .8rem">team_elements_container = soup.find_all(class_="Table__TR Table__TR--sm
+                    Table__even")</code>
+                <br>
+                <code style="font-size: .8rem">stat_elements_container = soup.find_all(class_="Table__Scroller")</code>
+                <br><br>
+                The team names were held under an element with class ‘Table__TR Table__TR--sm Table__even’ and the
+                stats under class ‘Table__Scroller’. To find the nested teams name and stats, I treated the newly
+                created
+                container variables in similar manner as the soup object
+                <br><br>
+                Unfortunately, team wins were not displayed on the passing stats chart, therefore I scraped them from
+                <a href="https://www.espn.com/nfl/standings/_/group/league">here</a> in the same way as before.
+                With all extracted data, I created a dictionary. Each value had an appropriate key describing what
+                stat the value represented.
+                <br><BR>
+                <span style="font-weight: bold">Writing to CSV file</span>
+                <br><br>
+                I created a file named team_stats.csv and opened it as csvfile
+                <br><br>
+                <code style="font-size: .8rem">stats_file = "team_stats.csv"</code>
+                <br>
+                <code style="font-size: .8rem">with open(stats_file, 'w') as csvfile:</code>
+                <br><br>
+                I then used the writeheader() and writerow() methods to write stat types as column section headers,
+                and their corresponding values for each team in the rows. To meet the end goal of this project, only
+                the team name, wins, and passing yards was relevant. Therefore, I extracted those values into a new
+                dictionary and wrote them to wins_yards.csv using the same method described above. Data In
+                wins_yards.csv was then used to determine the correlation between team wins and passing yards.
+
+                <br><br><a class="btn" href="https://github.com/Tynasello?tab=repositories" target="_blank">
+                    Github</a><br><br>
+            </p>
+          </li>
+          <li>
+            <input type="checkbox" checked>
+            <i></i>
+            <h2>Finding Correlation</h2>
+            <p>
+             To find if there is a correlation between wins and passing yards, I used the Pearson method: I found the
+                correlation coefficient using the correlation coefficient equation. The correlation coefficient is in
+                the range of -1 to 1. A value of 0 symbolizes no correlation, where as 1 and -1 represent strong
+                correlations in the positive or negative direction respectively.
+                <br>
+                <img src="images/nfl-scraper/eq.png" alt="">
+                <br>
+                To use this method I treated wins as ‘X’ and passing yards as ‘Y’. I created an ‘XY’, ‘X^2’, and
+                ‘Y^2’ column, as well as a ‘Sum’ row on the table. ‘XY’ representing the amount of wins for a team
+                times the amount of passing yards, and ‘X^2’ and ‘Y^2’ meaning the amount of wins and passing yards
+                squared respectively. Calculations were done to find values for the newly added columns. Lastly, the
+                sum of all column values was determined and inserted to the 'Sum' row. Numbers in the
+                ‘Sum’ row were applied to the correlation coefficient equation.
+                <br>
+                <img src="images/nfl-scraper/wins_yards.png" alt="">
+                <br>
+            </p>
+          </li>
+          <li>
+            <input type="checkbox" checked>
+            <i></i>
+            <h2>Result</h2>
+            <p>
+             After calculations, the correlation coefficient was 0.36. This value means there was a slight
+                positive correlation between the amount of wins and passing yards per team in the 2020-2021 NFL season.
+                It is
+                unclear whether this was a direct correlation or merely a result of another factor.
+                <br><br>
+                In the near future I plan on broadening the scope of values scraped, either by adding more
+                years to the data set or comparing values from 2020 to the 1970’s to see if there is a notable
+                difference in the correlation coefficient.
+                I am also looking into creating a command line tool for this project. <br>
+            </p>
+          </li>
+
+
+
+        </ul>
+    </div>
+
+
+    <script>
+
+
+
+
+    </script>
+</body>
+</html>
