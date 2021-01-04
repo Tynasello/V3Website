@@ -247,9 +247,10 @@ body {
     margin: 1rem 0; }
   #MAIN #ABOUT .container .about-content .languages-list {
     margin: 1rem 0;
-    width: 20vw;
+    padding: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr; }
+    grid-template-columns: 100px 100px;
+    grid-column-gap: 0; }
 
 #MAIN .cube2 {
   position: absolute;
@@ -758,11 +759,6 @@ body {
             transition: all .5s ease-in-out; }
     #MAIN #ABOUT .container .about-content .experience-with {
       margin: 1rem 0; }
-    #MAIN #ABOUT .container .about-content .languages-list {
-      margin: 1rem 0;
-      width: 26vw;
-      display: grid;
-      grid-template-columns: 1fr 1fr; }
   #MAIN #PROJECTS .container {
     width: 80vw; }
     #MAIN #PROJECTS .container .project-container {
@@ -903,11 +899,6 @@ body {
             transition: all .5s ease-in-out; }
     #MAIN #ABOUT .container .about-content .experience-with {
       margin: 1rem 0; }
-    #MAIN #ABOUT .container .about-content .languages-list {
-      margin: 1rem 0;
-      width: 26vw;
-      display: grid;
-      grid-template-columns: 1fr 1fr; }
   #MAIN #PROJECTS .container {
     width: 80vw; }
     #MAIN #PROJECTS .container .project-container {
@@ -1070,11 +1061,6 @@ body {
             transition: all .5s ease-in-out; }
     #MAIN #ABOUT .container .about-content .experience-with {
       margin: 1rem 0; }
-    #MAIN #ABOUT .container .about-content .languages-list {
-      margin: 1rem 0;
-      width: 35vw;
-      display: grid;
-      grid-template-columns: 1fr 1fr; }
   #MAIN #PROJECTS .container {
     width: 80vw; }
     #MAIN #PROJECTS .container .project-container {
@@ -1277,12 +1263,7 @@ body {
             transform: scale(1.3);
             transition: all .5s ease-in-out; }
     #MAIN #ABOUT .container .about-content .experience-with {
-      margin: 1rem 0; }
-    #MAIN #ABOUT .container .about-content .languages-list {
-      margin: 1rem 0;
-      width: 55vw;
-      display: grid;
-      grid-template-columns: 1fr 1fr; } }
+      margin: 1rem 0; } }
 
 /*Animations*/
 @-moz-keyframes pop-in {

@@ -247,9 +247,10 @@ body {
     margin: 1rem 0; }
   #MAIN #ABOUT .container .about-content .languages-list {
     margin: 1rem 0;
-    width: 20vw;
+    padding: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr; }
+    grid-template-columns: 150px 150px;
+    grid-column-gap: 0; }
 
 #MAIN .cube2 {
   position: absolute;
